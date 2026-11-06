@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: lightblue;
+            background-color: #e6e6fa;
             padding-top: 100px;
         }
 
@@ -19,7 +18,7 @@
         }
 
         button {
-            background-color: blue;
+            background-color: lightblue;
             color: white;
             padding: 15px 30px;
             border: none;
@@ -29,8 +28,9 @@
         }
 
         button:hover {
-            background-color: darkblue;
-        }
+    	transform: scale(1.1);
+   	transition: 0.3s;
+	}
 
         p {
             font-size: 24px;
@@ -47,6 +47,12 @@
     <h2>Puntos: <span id="puntos">0</span></h2>
 
     <button onclick="sumarPuntos()">¡Haz clic!</button>
+
+	<button onclick="reiniciar()" style="background-color: red;">
+    Reiniciar
+	</button>
+
+	<p id="mensaje"></p>
 
     <script>
         let puntos = 0;

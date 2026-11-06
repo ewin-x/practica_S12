@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer juego</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>¡Juego de puntos!</h1>
+
+    <p>Haz clic en el botón para ganar puntos.</p>
+
+    <h2>Puntos: <span id="puntos">0</span></h2>
+
+    <button onclick="sumarPuntos()">¡Haz clic!</button>
+
+    <script>
+        let puntos = 0;
+
+        function sumarPuntos() {
+            puntos++;
+            document.getElementById("puntos").innerHTML = puntos;
+        }
+    </script>
+
+</body>
+</html>
